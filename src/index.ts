@@ -1,3 +1,4 @@
-export * from './lib/utils-globals.module';
+export * from './lib/content.module';
+export * from './lib/model';
 
 
