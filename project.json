@@ -1,0 +1,32 @@
+{
+  "name": "fl-content",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/utils/fl-content/src",
+  "prefix": "sc",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/utils/fl-content"
+      ],
+      "options": {
+        "jestConfig": "libs/utils/fl-content/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/utils/fl-content/src/**/*.ts",
+          "libs/utils/fl-content/src/**/*.html"
+        ]
+      },
+      "outputs": [
+        "{options.outputFile}"
+      ]
+    }
+  },
+  "tags": []
+}
