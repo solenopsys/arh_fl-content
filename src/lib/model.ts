@@ -57,6 +57,7 @@ export interface ContentNode {
   before?: string;
   type: ContentNodeType;
   value: string;
+  items?: ContentNode[];
 }
 
 export interface VersionLite {

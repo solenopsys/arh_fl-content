@@ -2,7 +2,6 @@
   "name": "@solenopsys/fl-content",
   "version": "0.1.0",
   "scripts": {
-    "test": "node index.js",
-    "build": "etsc -p tsconfig.lib.json"
+    "build": "ng-packagr -p ng-package.json -c ../../../../tsconfig.base.json"
   }
 }
