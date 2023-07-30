@@ -1,7 +1,7 @@
 export const LAST_POSITION = -1;
 export const FIRST_POSITION = 0;
 
-export interface FragmentResp {
+export declare type FragmentResp ={
   results: [{
     uid: string,
     fragment: string,
@@ -12,7 +12,7 @@ export interface FragmentResp {
   }]
 }
 
-export interface VersionResp {
+export declare type VersionResp = {
   results: [{
     uid: string,
     blocks: {
@@ -24,26 +24,26 @@ export interface VersionResp {
   }]
 }
 
-export interface DragPoint {
+export declare type DragPoint ={
   groupID: string,
   index: number
 }
 
-export interface DragState {
+export declare type DragState ={
   active: boolean,
   start: DragPoint,
   moving: DragPoint
 }
 
 
-export interface ContentNodesGroup {
+export declare type ContentNodesGroup = {
   fragmentId:string;
   fid: string;
   edited: boolean;
   blocks: string[]
 }
 
-export interface BlockNode {
+export declare type BlockNode = {
   id: string;
   uid?: string;
   before?: string;
@@ -52,7 +52,7 @@ export interface BlockNode {
   value: string;
 }
 
-export interface ContentNode {
+export declare type ContentNode = {
   uid?: string;
   before?: string;
   type: ContentNodeType;
@@ -60,33 +60,30 @@ export interface ContentNode {
   items?: ContentNode[];
 }
 
-export interface VersionLite {
+export declare type VersionLite = {
   uid: string,
   version_date: string,
 }
 
-export interface FragmentVersion {
+export declare type FragmentVersion = {
   uid: string,
   nodes: string[];
 }
 
-export interface Fragment {
+export declare type Fragment ={
   uid: string;
   name: string;
   lastVersionId: string | undefined;
   versions: VersionLite[];
 }
 
-
-export interface ArticleVersion {
+export  type ArticleVersion = {
   articleId: string;
   blocks: ContentNode[];
 }
 
 
-
-
-export enum ContentNodeType {
+export declare enum ContentNodeType {
   PARAGRAPH = 'PARAGRAPH',
   HEADER1 = 'HEADER1',
   HEADER2 = 'HEADER2',
