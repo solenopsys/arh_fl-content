@@ -1,5 +1,10 @@
 
 
+export type ContentNode = {
+  value: string,
+  type: ContentNodeType
+  items: ContentNode[]
+}
 
 
 
